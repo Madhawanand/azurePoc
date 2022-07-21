@@ -11,5 +11,6 @@ class TestPoc:
      self.driver.get("https://www.youtube.com/")
      self.driver.maximize_window()
      self.driver.implicitly_wait(30)
+     self.print("something")
      self.driver.find_element(By.XPATH ,"//input[@id='search']").send_keys("Paramatma")
      self.driver.close()
