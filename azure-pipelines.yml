@@ -29,7 +29,10 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
+- script: |
+    python -m pip install --selenium
+    pip install -r requirements.txt
+  displayName: 'Install Selenium'
 - script: |
    -m pip install --pytest 
     pytest
