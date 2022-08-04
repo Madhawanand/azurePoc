@@ -12,7 +12,11 @@ class TestPoc:
         self.driver.get("https://www.youtube.com/")
         self.driver.maximize_window()
         print(self.driver.current_url)
+        self.driver.close()
 
     def test_search(self):
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        self.driver.get("https://www.youtube.com/")
+        self.driver.maximize_window()
         self.driver.find_element(By.XPATH, "//input[@id='search']").send_keys("paramatma")
         self.driver.close()
