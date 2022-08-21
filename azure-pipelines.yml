@@ -24,9 +24,10 @@ steps:
     pip install selenium
     pip install webdriver_manager
     pip install webdriver-manager
+    pip install pytest-html
   displayName: 'Install dependencies'
 
 - script: |
     pip install pytest pytest-azurepipelines
-    pytest -v -s
+    pytest -v -s --html=report.html
   displayName: 'pytest'
